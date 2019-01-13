@@ -11,7 +11,7 @@ const List = styled.ul `
 	padding: 0;
 	height: 49px;
 `
-class Headers extends React.Component {
+class Headers extends Component {
 	render(){
 		return (
 				<Row>
