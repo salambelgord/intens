@@ -36,7 +36,7 @@ const CallBtn = styled.button `
 	margin-top: 32px;
 	
 `
-class Main extends Component {
+class Main extends React.Component {
 	render(){
 		return (
 				<Row>

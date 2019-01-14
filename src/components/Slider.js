@@ -26,7 +26,7 @@ class Slider extends Component {
 				active: 0,
 				max: 0
 			}
-			this.state.max =this.state.slides.lenght;
+			this.state.max =this.state.slides.length;
 			this.intervalBetweenSlides = this.intervalBetweenSlides.bind(this);
 			this.toggleAutoPlay = this.toggleAutoPlay.bind(this);
 			this.nextOne = this.nextOne.bind(this);
@@ -85,14 +85,14 @@ class Slider extends Component {
 		}
 		setSliderStyles() {
 			
-			const transition = this.state.active * - 100/this.state.slides.lenght
+			const transition = this.state.active * -100/this.state.slides.length
 			return {
-				width:(this.state.slides.lenght * 100) + '%',
+				width:(this.state.slides.length * 100) + '%',
 				transform: `translateX(${transition}%)`
 			}
 		}
 		renderSlides(){
-			const transition = 100/this.state.slides.lenght + '%'
+			const transition = 100/this.state.slides.length + '%'
 
 			return this.state.slides.map ((item,index) => (
 				<div
