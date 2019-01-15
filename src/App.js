@@ -6,6 +6,11 @@ import styled from 'styled-components'
 import Headers from './components/Headers'
 import Menu from './components/Menu'
 import Main from './components/Main'
+import {BrowserRouter as Router,Route} from 'react-router-dom';
+import FirstPage from './components/FirstPage';
+import SecondPage from './components/SecondPage';
+import ThirdPage from './components/ThirdPage';
+
 
 const url = process.env.PUBLIC_URL + '/img/bg.jpg'
 
@@ -29,6 +34,7 @@ const MainWrapper = styled.main`
 class App extends Component {
   render() {
     return (
+    	<Router>
           <div className="App">
             <HeaderWrapper>
               <Grid>
@@ -42,10 +48,14 @@ class App extends Component {
             </MenuWrapper>
             <MainWrapper>
               <Grid>
-                <Main />
+                <Route path='/' component={Main} exact/>
+                <Route path='/first' component={FirstPage} />
+                <Route path='/second' component={SecondPage} />
+                <Route path='/third' component={ThirdPage} />
               </Grid>
             </MainWrapper>
           </div>
+        </Router>  
     );
   }
 }
